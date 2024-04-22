@@ -1,11 +1,11 @@
 export const ChoiceBox = () => {
   return (
     <>
-      <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
+      <div className="flex flex-col items-center justify-center gap-6 sm:flex-row mb-16">
         <div className="flex w-fit items-center rounded-lg border border-black shadow-lg transition-all hover:scale-110 dark:border-[#ccc]">
           <button className="p-12">
             <svg
-              id="box1"
+              className="box"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="#444"
@@ -21,7 +21,7 @@ export const ChoiceBox = () => {
         <div className="flex w-fit items-center rounded-lg border border-black shadow-lg transition-all hover:scale-110 dark:border-[#ccc]">
           <button className="p-12">
             <svg
-              id="box2"
+              className="box"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="#444"
@@ -37,7 +37,7 @@ export const ChoiceBox = () => {
         <div className="flex w-fit items-center rounded-lg border border-black shadow-lg transition-all hover:scale-110 dark:border-[#ccc]">
           <button className="p-12">
             <svg
-              id="box3"
+              className="box"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="#444"
