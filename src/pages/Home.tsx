@@ -1,7 +1,6 @@
 import React from "react";
-import { Navbar } from "../parts/Navbar.tsx";
-import { Header } from "../parts/Header.tsx";
-import { ChoiceBox } from "../parts/ChoiceBox.tsx";
+import { Header } from "../components/Header.tsx";
+import { ChoiceBox } from "../components/ChoiceBox.tsx";
 import { Calendar } from "../components/ui/calendar.tsx";
 
 export const Home = () => {
@@ -9,7 +8,6 @@ export const Home = () => {
 
   return (
     <div className="container">
-      <Navbar />
       <Header />
       <main>
         <ChoiceBox />
@@ -18,7 +16,7 @@ export const Home = () => {
             mode="single"
             selected={date}
             onSelect={setDate}
-            className="rounded-md border"
+            className="rounded-md border border-black shadow-md dark:border-[#ccc]"
           />
         </div>
       </main>

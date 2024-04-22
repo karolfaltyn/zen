@@ -1,8 +1,11 @@
 export const ChoiceBox = () => {
   return (
     <>
-      <div className="flex flex-col items-center justify-center gap-6 sm:flex-row mb-16">
-        <div className="flex w-fit items-center rounded-lg border border-black shadow-lg transition-all hover:scale-110 dark:border-[#ccc]">
+      <p className="mb-6 flex justify-center text-3xl font-light">
+        Select Option
+      </p>
+      <div className="mb-16 flex flex-col items-center justify-center gap-6 sm:flex-row">
+        <div className="flex w-fit items-center rounded-md border border-black shadow-md transition-all hover:scale-110 dark:border-[#ccc]">
           <button className="p-12">
             <svg
               className="box"
@@ -18,7 +21,7 @@ export const ChoiceBox = () => {
           </button>
         </div>
 
-        <div className="flex w-fit items-center rounded-lg border border-black shadow-lg transition-all hover:scale-110 dark:border-[#ccc]">
+        <div className="flex w-fit items-center rounded-md border border-black shadow-md transition-all hover:scale-110 dark:border-[#ccc]">
           <button className="p-12">
             <svg
               className="box"
@@ -34,7 +37,7 @@ export const ChoiceBox = () => {
           </button>
         </div>
 
-        <div className="flex w-fit items-center rounded-lg border border-black shadow-lg transition-all hover:scale-110 dark:border-[#ccc]">
+        <div className="flex w-fit items-center rounded-md border border-black shadow-md transition-all hover:scale-110 dark:border-[#ccc]">
           <button className="p-12">
             <svg
               className="box"
