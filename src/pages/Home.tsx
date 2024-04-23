@@ -2,6 +2,7 @@ import React from "react";
 import { Header } from "../components/Header.tsx";
 import { ChoiceBox } from "../components/ChoiceBox.tsx";
 import { Calendar } from "../components/ui/calendar.tsx";
+import { Footer } from "../components/Footer.tsx";
 
 export const Home = () => {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
@@ -20,6 +21,7 @@ export const Home = () => {
           />
         </div>
       </main>
+      <Footer />
     </div>
   );
 };
