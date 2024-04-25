@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
-export const Time: React.FC = () => {
+export const Time = () => {
   const [currentTime, setCurrentTime] = useState<string>("");
 
   useEffect(() => {
