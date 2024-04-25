@@ -1,5 +1,5 @@
 import React from "react";
-import { Header } from "../components/Header.tsx";
+import { Hero } from "../components/Hero.tsx";
 import { ChoiceBox } from "../components/ChoiceBox.tsx";
 import { Calendar } from "../components/ui/calendar.tsx";
 import { Footer } from "../components/Footer.tsx";
@@ -9,7 +9,7 @@ export const Home = () => {
 
   return (
     <div className="container">
-      <Header />
+      <Hero />
       <main>
         <ChoiceBox />
         <div className="flex justify-center">
