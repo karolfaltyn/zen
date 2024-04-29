@@ -1,12 +1,14 @@
 import "./assets/style.css";
-import { Home } from "./pages/Home";
-// import { Pomodoro } from "./pages/Pomodoro";
+// import { HomePage } from "./pages/HomePage";
+import { PomodoroPage } from "./pages/PomodoroPage";
+// import { TimerPage } from "./pages/TimerPage";
 
 export const App = () => {
   return (
     <>
-      {/* <Pomodoro /> */}
-      <Home />
+      {/* <HomePage /> */}
+      <PomodoroPage />
+      {/* <TimerPage /> */}
     </>
   );
 };
