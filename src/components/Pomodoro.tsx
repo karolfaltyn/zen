@@ -2,20 +2,20 @@ import React, { useState, useEffect, useRef } from "react";
 import { Button } from "./ui/button";
 
 export const Pomodoro: React.FC = () => {
-  const [sessionCount, setSessionCount] = useState(0);
-  const [minutes, setMinutes] = useState(25); // Init work time
-  const [seconds, setSeconds] = useState(0);
-  const [isResting, setIsResting] = useState(false);
-  const [isActive, setIsActive] = useState(false);
-  const [playAlarm, setPlayAlarm] = useState(false);
-  const timerRef = useRef<NodeJS.Timeout>();
-  const audioRef = useRef<HTMLAudioElement>(null);
+  const [sessionCount, setSessionCount] = useState<number>(0);
+  const [minutes, setMinutes] = useState<number>(25); // Init work time
+  const [seconds, setSeconds] = useState<number>(0);
+  const [isResting, setIsResting] = useState<boolean>(false);
+  const [isActive, setIsActive] = useState<boolean>(false);
+  const [playAlarm, setPlayAlarm] = useState<boolean>(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
     if (isActive) {
       timerRef.current = setInterval(() => {
         if (seconds === 0 && minutes === 0) {
-          clearInterval(timerRef.current);
+          clearInterval(timerRef.current!);
           if (isResting) {
             setMinutes(25); // Work time
             setIsResting(false);
@@ -41,7 +41,7 @@ export const Pomodoro: React.FC = () => {
         }
       }, 1000);
     } else {
-      clearInterval(timerRef.current);
+      clearInterval(timerRef.current!);
     }
 
     return () => {
@@ -60,7 +60,8 @@ export const Pomodoro: React.FC = () => {
     }
   }, [playAlarm]);
 
-  const formatTime = (time: number) => (time < 10 ? `0${time}` : `${time}`);
+  const formatTime = (time: number): string =>
+    time < 10 ? `0${time}` : `${time}`;
 
   const handleStartStop = () => {
     if (isActive) {
