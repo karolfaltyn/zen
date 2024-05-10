@@ -72,7 +72,7 @@ export const Timer = () => {
   return (
     <div className="flex flex-col items-center">
       <h1 className="mb-8 font-sarabun text-2xl font-medium text-[#444] dark:text-[#fafafa]">
-        Pomodoro Timer
+        Timer
       </h1>
       <div className="mb-8 font-sarabun text-5xl font-medium text-[#7f0102] dark:text-red-400 sm:text-7xl">
         <input
