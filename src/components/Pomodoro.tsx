@@ -100,7 +100,7 @@ export const Pomodoro: React.FC = () => {
       <h1 className="mb-8 font-sarabun text-2xl font-medium text-[#444] dark:text-[#fafafa]">
         Pomodoro Timer
       </h1>
-      <p className="mb-2 font-sarabun text-7xl font-medium text-[#7f0102] dark:text-red-400">
+      <p className="mb-2 font-sarabun text-5xl font-medium text-[#7f0102] dark:text-red-400 sm:text-7xl">
         {isResting ? "Rest Time" : "Work Time"}
       </p>
       <p className="mb-8 text-3xl font-extralight">
