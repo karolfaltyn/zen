@@ -2,7 +2,7 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import "./assets/style.css";
 import { HomePage } from "./pages/HomePage";
 import { PomodoroPage } from "./pages/PomodoroPage";
-import { TimerPage } from "./pages/TimerPage";
+import { TimerStopwatchPage } from "./pages/TimerStopwatchPage";
 
 export const App = () => {
   return (
@@ -10,7 +10,7 @@ export const App = () => {
       <Routes>
         <Route index element={<HomePage />} />
         <Route path="pomodoro" element={<PomodoroPage />} />
-        <Route path="timer" element={<TimerPage />} />
+        <Route path="timer" element={<TimerStopwatchPage />} />
       </Routes>
     </HashRouter>
   );
