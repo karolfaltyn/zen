@@ -1,10 +1,10 @@
-interface ButtonProps {
+interface ComponentSwitchProps {
   onClick: () => void;
   active: boolean;
   children: React.ReactNode;
 }
 
-export const Button: React.FC<ButtonProps> = ({
+export const ComponentSwitch: React.FC<ComponentSwitchProps> = ({
   onClick,
   active,
   children,

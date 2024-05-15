@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 export const Timer = () => {
   const [hours, setHours] = useState<string>("00");
-  const [minutes, setMinutes] = useState<string>("00");
+  const [minutes, setMinutes] = useState<string>("05");
   const [seconds, setSeconds] = useState<string>("00");
   const [timerRunning, setTimerRunning] = useState<boolean>(false);
 
@@ -34,7 +34,7 @@ export const Timer = () => {
 
   const resetTimer = () => {
     setHours("00");
-    setMinutes("00");
+    setMinutes("05");
     setSeconds("00");
     setTimerRunning(false);
   };
