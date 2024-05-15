@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "./ui/button";
 
-export const Pomodoro: React.FC = () => {
+export const Pomodoro = () => {
   const [sessionCount, setSessionCount] = useState<number>(0);
   const [minutes, setMinutes] = useState<number>(25); // Init work time
   const [seconds, setSeconds] = useState<number>(0);
