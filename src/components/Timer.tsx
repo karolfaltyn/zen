@@ -108,8 +108,7 @@ export const Timer = () => {
         </Button>
       </div>
       <audio ref={audioRef}>
-        <source src="/public/assets/times-out.mp3" type="audio/mpeg" />
-        Your browser does not support the audio element.
+        <source src="/assets/times-out.mp3" type="audio/mpeg" />
       </audio>
     </div>
   );

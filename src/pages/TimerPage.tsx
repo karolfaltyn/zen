@@ -3,9 +3,11 @@ import { Timer } from "../components/Timer";
 
 export const TimerPage = () => {
   return (
-    <>
+    <div className="container">
       <Navbar />
-      <Timer />
-    </>
+      <main>
+        <Timer />
+      </main>
+    </div>
   );
 };
