@@ -1,4 +1,5 @@
 import { toggleTheme } from "../utils/toggleTheme.ts";
+import { Time } from "./ui/Time.tsx";
 
 export const Hero = () => {
   return (
@@ -34,9 +35,12 @@ export const Hero = () => {
           </button>
         </div>
       </div>
-      <p className="font-sarabun text-3xl font-extralight text-[#7f0102] dark:text-red-400">
+      <p className="mb-2 font-sarabun text-3xl font-extralight text-[#7f0102] dark:text-red-400">
         Management app
       </p>
+      <div className="flex justify-center text-2xl font-extralight">
+        <Time />
+      </div>
     </header>
   );
 };

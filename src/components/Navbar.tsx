@@ -39,7 +39,7 @@ export const Navbar = () => {
           </button>
         </div>
       </div>
-      <div className="text-2xl font-extralight">
+      <div className="w-12 text-2xl font-extralight">
         <Time />
       </div>
     </nav>

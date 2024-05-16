@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
+import { Skeleton } from "../ui/skeleton";
 
 export const Time = () => {
   const [currentTime, setCurrentTime] = useState<string>("");
+  const [loaded, setLoaded] = useState<boolean>(false);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -12,8 +14,24 @@ export const Time = () => {
       setCurrentTime(`${hours}:${minutes}:${seconds}`);
     }, 1000);
 
-    return () => clearInterval(intervalId); // Cleanup function
+    return () => clearInterval(intervalId);
   }, []);
 
-  return currentTime;
+  useEffect(() => {
+    // Loading delay for 1 seconds
+    const timerId = setTimeout(() => {
+      setLoaded(true);
+    }, 1000);
+
+    return () => clearTimeout(timerId);
+  }, []);
+
+  return (
+    <div>
+      {loaded && <div>{currentTime}</div>}
+      {!loaded && (
+        <Skeleton className="mt-[4px] h-[28px] w-[80px] rounded-full" />
+      )}
+    </div>
+  );
 };
