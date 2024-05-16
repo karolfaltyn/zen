@@ -1,5 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import { Button } from "./ui/button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "./ui/accordion";
 
 export const Pomodoro = () => {
   const [sessionCount, setSessionCount] = useState<number>(0);
@@ -117,6 +123,35 @@ export const Pomodoro = () => {
         <Button variant="secondary" onClick={handleReset}>
           Reset
         </Button>
+      </div>
+      <div className="mt-8 w-64 sm:w-96">
+        <Accordion type="single" collapsible>
+          <AccordionItem value="item-1">
+            <AccordionTrigger>What is the Pomodoro Technique?</AccordionTrigger>
+            <AccordionContent>
+              A time management method developed by Francesco Cirillo in the
+              late 1980s. It uses a kitchen timer to break work into intervals,
+              typically 25 minutes in length, separated by short breaks.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-2">
+            <AccordionTrigger>How does it work?</AccordionTrigger>
+            <AccordionContent>
+              Set your timer for 25 minutes and focus on a single task until the
+              timer rings. When your session ends, enjoy a five-minute break.
+              After four Pomodoros, take a longer, more restorative 15-30 minute
+              break.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-3">
+            <AccordionTrigger>Why should I use it?</AccordionTrigger>
+            <AccordionContent>
+              The Pomodoro Technique essentially trains people to focus on tasks
+              better by limiting the length of time they attempt to maintain
+              that focus and ensuring restorative breaks from the effort.
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </div>
     </div>
   );
