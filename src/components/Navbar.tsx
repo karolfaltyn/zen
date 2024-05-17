@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Time } from "./ui/Time.tsx";
+import { Time } from "./Time.tsx";
 import { toggleTheme } from "../utils/toggleTheme.ts";
 
 export const Navbar = () => {

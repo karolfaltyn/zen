@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export const Options = () => {
   return (
-    <>
+    <nav>
       <p className="mb-6 flex justify-center text-3xl font-light">
         Select Option
       </p>
@@ -71,6 +71,6 @@ export const Options = () => {
           </Link>
         </div>
       </div>
-    </>
+    </nav>
   );
 };

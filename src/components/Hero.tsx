@@ -1,5 +1,5 @@
 import { toggleTheme } from "../utils/toggleTheme.ts";
-import { Time } from "./ui/Time.tsx";
+import { Time } from "./Time.tsx";
 
 export const Hero = () => {
   return (
