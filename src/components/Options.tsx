@@ -13,7 +13,7 @@ export const Options = () => {
               className="box"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              fill="#444"
+              fill="#999"
               width="64"
               height="64"
             >
@@ -29,7 +29,7 @@ export const Options = () => {
               className="box"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              fill="#444"
+              fill="#999"
               width="64"
               height="64"
             >
@@ -45,7 +45,7 @@ export const Options = () => {
               className="box"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              fill="#444"
+              fill="#999"
               width="64"
               height="64"
             >
@@ -61,7 +61,7 @@ export const Options = () => {
               className="box"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              fill="#444"
+              fill="#999"
               width="64"
               height="64"
             >
