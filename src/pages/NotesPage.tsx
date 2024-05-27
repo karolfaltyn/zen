@@ -8,15 +8,19 @@ export const NotePage = () => {
   const [newNote, setNewNote] = useState<string>("");
   const [charCount, setCharCount] = useState<number>(0);
 
+  // Retrieve notes from local storage on initial load
   useEffect(() => {
     const storedNotes = localStorage.getItem("notes");
-    if (storedNotes) {
+    if (storedNotes && storedNotes !== "[]") {
       setNotes(JSON.parse(storedNotes));
     }
   }, []);
 
+  // Save notes to local storage whenever notes state changes
   useEffect(() => {
-    localStorage.setItem("notes", JSON.stringify(notes));
+    if (notes.length > 0) {
+      localStorage.setItem("notes", JSON.stringify(notes));
+    }
   }, [notes]);
 
   const addNote = () => {
