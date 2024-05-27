@@ -3,6 +3,7 @@ import { toggleTheme } from "./utils/toggleTheme";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import "./assets/style.css";
 import { Home } from "./pages/Home";
+import { NotePage } from "./pages/NotesPage";
 import { PomodoroPage } from "./pages/PomodoroPage";
 import { TimerPage } from "./pages/TimerPage";
 
@@ -21,6 +22,7 @@ export const App = () => {
     <HashRouter>
       <Routes>
         <Route index element={<Home />} />
+        <Route path="notes" element={<NotePage />} />
         <Route path="pomodoro" element={<PomodoroPage />} />
         <Route path="timer" element={<TimerPage />} />
       </Routes>
