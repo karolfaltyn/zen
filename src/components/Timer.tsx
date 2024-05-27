@@ -52,7 +52,9 @@ export const Timer = () => {
       return;
     }
 
-    const timer = setInterval(() => {
+    let timer: NodeJS.Timeout;
+
+    const updateTimer = () => {
       if (timerRunning && totalSeconds > 0) {
         totalSeconds--;
         const updatedHours = Math.floor(totalSeconds / 3600);
@@ -64,10 +66,34 @@ export const Timer = () => {
       } else {
         clearInterval(timer);
       }
-    }, 1000);
+    };
+
+    if (timerRunning) {
+      timer = setInterval(updateTimer, 1000);
+    }
 
     return () => clearInterval(timer);
   }, [timerRunning, hours, minutes, seconds, audioRef]);
+
+  // Handle visibility change
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "hidden") {
+        setTimerRunning(false); // Pause timer when page is hidden
+      } else {
+        if (timerRunning) {
+          // Resume timer when page becomes visible if it was running
+          setTimerRunning(true);
+        }
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, [timerRunning]);
 
   return (
     <div className="flex flex-col items-center">
@@ -104,6 +130,15 @@ export const Timer = () => {
           Reset
         </Button>
       </div>
+
+      <div className="mt-8 flex max-w-[60ch] flex-col items-center text-center">
+        <span className="text-lg font-semibold">Warning</span>
+        <p>
+          Timer will be stopped if you change or minimize page due to browser
+          performance optimization
+        </p>
+      </div>
+
       <audio ref={audioRef}>
         <source src="/assets/times-out.mp3" type="audio/mpeg" />
       </audio>

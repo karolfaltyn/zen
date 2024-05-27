@@ -60,6 +60,15 @@ export const Stopwatch = () => {
           Reset
         </Button>
       </div>
+
+      <div className="mt-8 flex max-w-[60ch] flex-col items-center text-center">
+        <span className="text-lg font-semibold">Warning</span>
+        <p>
+          Timer will be stopped if you change or minimize page due to browser
+          performance optimization
+        </p>
+      </div>
+
       <div className="mt-6">
         <h3 className="text-xl font-medium">Saved Times:</h3>
         <ul className="text-center">
