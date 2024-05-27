@@ -59,9 +59,9 @@ export const Note: React.FC<NoteProps> = ({
           </div>
         </div>
       ) : (
-        <div className="flex items-center justify-between gap-4">
+        <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           <p className="whitespace-pre-wrap break-words">{note}</p>
-          <div className="flex flex-col justify-center gap-2 sm:flex-row">
+          <div className="flex flex-row justify-center gap-2 sm:flex-col xl:flex-row">
             <Button onClick={handleEditStart}>Edit</Button>
             <Button variant="outline" onClick={() => onDelete(index)}>
               Delete
