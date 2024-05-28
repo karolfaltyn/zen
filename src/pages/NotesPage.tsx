@@ -72,7 +72,7 @@ export const NotePage = () => {
               <Button onClick={addNote}>Add</Button>
             </div>
           </div>
-          <div className="flex flex-col gap-4">
+          <div className="mb-8 flex flex-col gap-4">
             {notes.map((note, index) => (
               <Note
                 key={index}

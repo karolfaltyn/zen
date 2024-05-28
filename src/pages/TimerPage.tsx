@@ -15,7 +15,7 @@ export const TimerPage = () => {
     <div className="container">
       <Navbar />
       <main>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center mb-8">
           <h1 className="flex gap-4">
             <ComponentSwitch
               onClick={() => toggleComponent(true)}

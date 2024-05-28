@@ -72,7 +72,7 @@ export const TodoListPage = () => {
               <Button onClick={addTask}>Add</Button>
             </div>
           </div>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 mb-8">
             {todo.map((task, index) => (
               <TodoItem
                 key={index}
