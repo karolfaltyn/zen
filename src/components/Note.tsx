@@ -52,7 +52,7 @@ export const Note: React.FC<NoteProps> = ({
             </span>
             <div className="flex justify-center gap-2">
               <Button onClick={handleEditSave}>Save</Button>
-              <Button variant="secondary" onClick={handleEditCancel}>
+              <Button variant="outline" onClick={handleEditCancel}>
                 Cancel
               </Button>
             </div>
@@ -63,7 +63,7 @@ export const Note: React.FC<NoteProps> = ({
           <p className="whitespace-pre-wrap break-words">{note}</p>
           <div className="flex flex-row justify-center gap-2 sm:flex-col xl:flex-row">
             <Button onClick={handleEditStart}>Edit</Button>
-            <Button variant="outline" onClick={() => onDelete(index)}>
+            <Button variant="secondary" onClick={() => onDelete(index)}>
               Delete
             </Button>
           </div>
