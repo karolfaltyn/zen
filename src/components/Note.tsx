@@ -22,7 +22,7 @@ export const Note: React.FC<NoteProps> = ({
   };
 
   const handleEditChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    if (event.target.value.length <= 500) {
+    if (event.target.value.length <= 1500) {
       setEditedNote(event.target.value);
     }
   };
@@ -48,7 +48,7 @@ export const Note: React.FC<NoteProps> = ({
           />
           <div className="mt-2 flex flex-col items-center justify-between sm:flex-row">
             <span className="mb-2 font-sarabun text-[#999]">
-              {editedNote.length}/500 characters
+              {editedNote.length}/1500 characters
             </span>
             <div className="flex justify-center gap-2">
               <Button onClick={handleEditSave}>Save</Button>
@@ -59,9 +59,9 @@ export const Note: React.FC<NoteProps> = ({
           </div>
         </div>
       ) : (
-        <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
+        <div className="flex flex-col items-center justify-between gap-4 ">
           <p className="whitespace-pre-wrap break-words">{note}</p>
-          <div className="flex flex-row justify-center gap-2 sm:flex-col xl:flex-row">
+          <div className="flex flex-row justify-center gap-2">
             <Button onClick={handleEditStart}>Edit</Button>
             <Button variant="secondary" onClick={() => onDelete(index)}>
               Delete

@@ -24,7 +24,7 @@ export const NotePage = () => {
   }, [notes]);
 
   const addNote = () => {
-    if (newNote.trim() && newNote.length <= 500) {
+    if (newNote.trim() && newNote.length <= 1500) {
       setNotes([...notes, newNote]);
       setNewNote("");
       setCharCount(0);
@@ -34,7 +34,7 @@ export const NotePage = () => {
   const handleNewNoteChange = (
     event: React.ChangeEvent<HTMLTextAreaElement>,
   ) => {
-    if (event.target.value.length <= 500) {
+    if (event.target.value.length <= 1500) {
       setNewNote(event.target.value);
       setCharCount(event.target.value.length);
     }
@@ -67,7 +67,7 @@ export const NotePage = () => {
             />
             <div className="mb-8 mt-2 flex items-center justify-between">
               <span className="font-sarabun text-[#999]">
-                {charCount}/500 characters
+                {charCount}/1500 characters
               </span>
               <Button onClick={addNote}>Add</Button>
             </div>
