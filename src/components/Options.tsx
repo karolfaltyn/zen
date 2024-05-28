@@ -8,7 +8,7 @@ export const Options = () => {
       </p>
       <div className="mb-16 flex flex-wrap items-center justify-center gap-6">
         <div className="flex w-fit items-center rounded-md border border-black shadow-md transition-all hover:scale-110 dark:border-[#ccc]">
-          <Link to="/" className="p-12">
+          <Link to="/todo" className="p-12">
             <svg
               className="box"
               xmlns="http://www.w3.org/2000/svg"
