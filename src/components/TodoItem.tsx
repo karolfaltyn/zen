@@ -81,7 +81,7 @@ export const TodoItem: React.FC<TodoProps> = ({
               variant="outline"
               onClick={handleDoneToggle}
               style={{ textDecoration: isDone ? "line-through" : "none" }}
-              className="text-md font-extrabold text-[#7f0102]"
+              className="text-md font-extrabold text-[#7f0102] dark:text-red-400"
             >
               {isDone ? <>&#9744;</> : <>&#9744;</>}
             </Button>
