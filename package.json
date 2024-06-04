@@ -13,7 +13,7 @@
     "build:tailwind": "postcss ./src/assets/tailwind.css -o ./src/assets/style.css",
     "prod": "NODE_ENV=production postcss ./src/assets/tailwind.css -o ./src/assets/style.css",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.1.2",
