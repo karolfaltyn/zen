@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { toggleTheme } from "./utils/toggleTheme";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import "./assets/style.css";
 import { Home } from "./pages/Home";
