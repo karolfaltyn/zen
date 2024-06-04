@@ -12,10 +12,11 @@ export const App = () => {
   useEffect(() => {
     const isDarkMode = localStorage.getItem("isDarkMode");
 
-    if (isDarkMode) {
-      document.documentElement.classList.toggle("dark", JSON.parse(isDarkMode));
-      document.body.classList.toggle("bg-[#181a1b]", JSON.parse(isDarkMode));
-      toggleTheme();
+    if (isDarkMode !== null) {
+      const parsedIsDarkMode = JSON.parse(isDarkMode);
+
+      document.documentElement.classList.toggle("dark", parsedIsDarkMode);
+      document.body.classList.toggle("bg-[#181a1b]", parsedIsDarkMode);
     }
   }, []);
 
