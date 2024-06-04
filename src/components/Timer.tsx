@@ -140,7 +140,7 @@ export const Timer = () => {
       </div>
 
       <audio ref={audioRef}>
-        <source src="/assets/times-out.mp3" type="audio/mpeg" />
+        <source src="/zen/assets/times-out.mp3" type="audio/mpeg" />
       </audio>
     </div>
   );

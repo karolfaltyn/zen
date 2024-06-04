@@ -114,7 +114,7 @@ export const Pomodoro = () => {
       </p>
       <audio
         ref={audioRef}
-        src="/assets/times-out.mp3" // Times up sound
+        src="/zen/assets/times-out.mp3" // Times up sound
       />
       <div className="flex gap-4">
         <Button onClick={handleStartStop}>
