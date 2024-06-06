@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Navbar } from "../components/Navbar";
 import { TodoItem } from "../components/TodoItem";
 import { Button } from "../components/ui/button";
@@ -20,6 +20,8 @@ export const TodoListPage = () => {
   useEffect(() => {
     if (todo.length > 0) {
       localStorage.setItem("tasks", JSON.stringify(todo));
+    } else {
+      localStorage.removeItem("tasks"); // Remove localStorage entry if todo list is empty
     }
   }, [todo]);
 

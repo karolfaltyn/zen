@@ -20,6 +20,8 @@ export const NotePage = () => {
   useEffect(() => {
     if (notes.length > 0) {
       localStorage.setItem("notes", JSON.stringify(notes));
+    } else {
+      localStorage.removeItem("notes"); // Remove localStorage entry if notes list is empty
     }
   }, [notes]);
 
