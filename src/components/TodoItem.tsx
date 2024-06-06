@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { Button } from "../components/ui/button";
 
 interface TodoProps {
-  todo: string;
+  todo: { task: string; done: boolean };
   index: number;
   onDelete: (index: number) => void;
   onEdit: (index: number, newTodo: string) => void;
+  onToggleDone: (index: number) => void;
 }
 
 export const TodoItem: React.FC<TodoProps> = ({
@@ -13,10 +14,11 @@ export const TodoItem: React.FC<TodoProps> = ({
   index,
   onDelete,
   onEdit,
+  onToggleDone,
 }) => {
   const [isEditing, setIsEditing] = useState(false);
-  const [editedTodo, setEditedTodo] = useState(todo);
-  const [isDone, setIsDone] = useState(false);
+  const [editedTodo, setEditedTodo] = useState(todo.task);
+  const [isDone, setIsDone] = useState(todo.done);
 
   const handleEditStart = () => {
     setIsEditing(true);
@@ -34,12 +36,13 @@ export const TodoItem: React.FC<TodoProps> = ({
   };
 
   const handleEditCancel = () => {
-    setEditedTodo(todo);
+    setEditedTodo(todo.task);
     setIsEditing(false);
   };
 
   const handleDoneToggle = () => {
     setIsDone(!isDone);
+    onToggleDone(index);
   };
 
   return (
@@ -70,7 +73,7 @@ export const TodoItem: React.FC<TodoProps> = ({
               isDone ? "line-through" : ""
             }`}
           >
-            {todo}
+            {todo.task}
           </p>
           <div className="flex flex-row justify-center gap-2 sm:flex-col xl:flex-row">
             <Button onClick={handleEditStart}>Edit</Button>

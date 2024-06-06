@@ -4,11 +4,10 @@ import { TodoItem } from "../components/TodoItem";
 import { Button } from "../components/ui/button";
 
 export const TodoListPage = () => {
-  const [todo, setTodo] = useState<string[]>([]);
+  const [todo, setTodo] = useState<{ task: string; done: boolean }[]>([]);
   const [newTodo, setNewTodo] = useState<string>("");
   const [charCount, setCharCount] = useState<number>(0);
 
-  // Retrieve tasks from local storage on initial load
   useEffect(() => {
     const storedTodo = localStorage.getItem("tasks");
     if (storedTodo && storedTodo !== "[]") {
@@ -16,18 +15,13 @@ export const TodoListPage = () => {
     }
   }, []);
 
-  // Save tasks to local storage whenever todo state changes
   useEffect(() => {
-    if (todo.length > 0) {
-      localStorage.setItem("tasks", JSON.stringify(todo));
-    } else {
-      localStorage.removeItem("tasks"); // Remove localStorage entry if todo list is empty
-    }
+    localStorage.setItem("tasks", JSON.stringify(todo));
   }, [todo]);
 
   const addTask = () => {
     if (newTodo.trim() && newTodo.length <= 500) {
-      setTodo([...todo, newTodo]);
+      setTodo([...todo, { task: newTodo, done: false }]);
       setNewTodo("");
       setCharCount(0);
     }
@@ -42,13 +36,22 @@ export const TodoListPage = () => {
     }
   };
 
-  const deleteTask = (index: number) => {
-    const updatedTodo = todo.filter((_, i) => i !== index);
+  const deleteTask = (taskIndex: number) => {
+    const updatedTodo = todo.filter((_, index) => index !== taskIndex);
     setTodo(updatedTodo);
   };
 
-  const editTask = (index: number, newTask: string) => {
-    const updatedTodo = todo.map((task, i) => (i === index ? newTask : task));
+  const editTask = (taskIndex: number, newTask: string) => {
+    const updatedTodo = todo.map((task, index) =>
+      index === taskIndex ? { ...task, task: newTask } : task,
+    );
+    setTodo(updatedTodo);
+  };
+
+  const toggleDone = (taskIndex: number) => {
+    const updatedTodo = todo.map((task, index) =>
+      index === taskIndex ? { ...task, done: !task.done } : task,
+    );
     setTodo(updatedTodo);
   };
 
@@ -74,7 +77,7 @@ export const TodoListPage = () => {
               <Button onClick={addTask}>Add</Button>
             </div>
           </div>
-          <div className="flex flex-col gap-4 mb-8">
+          <div className="mb-8 flex flex-col gap-4">
             {todo.map((task, index) => (
               <TodoItem
                 key={index}
@@ -82,6 +85,7 @@ export const TodoListPage = () => {
                 index={index}
                 onDelete={deleteTask}
                 onEdit={editTask}
+                onToggleDone={toggleDone} // Dodaj prop onToggleDone
               />
             ))}
           </div>
