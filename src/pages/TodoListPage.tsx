@@ -39,6 +39,7 @@ export const TodoListPage = () => {
   const deleteTask = (taskIndex: number) => {
     const updatedTodo = todo.filter((_, index) => index !== taskIndex);
     setTodo(updatedTodo);
+    window.location.reload();
   };
 
   const editTask = (taskIndex: number, newTask: string) => {
@@ -85,7 +86,7 @@ export const TodoListPage = () => {
                 index={index}
                 onDelete={deleteTask}
                 onEdit={editTask}
-                onToggleDone={toggleDone} // Dodaj prop onToggleDone
+                onToggleDone={toggleDone}
               />
             ))}
           </div>
