@@ -6,6 +6,7 @@ import { TodoListPage } from "./pages/TodoListPage";
 import { NotePage } from "./pages/NotesPage";
 import { PomodoroPage } from "./pages/PomodoroPage";
 import { TimerPage } from "./pages/TimerPage";
+import { ErrorPage } from "./pages/ErrorPage";
 
 export const App = () => {
   useEffect(() => {
@@ -27,6 +28,7 @@ export const App = () => {
         <Route path="notes" element={<NotePage />} />
         <Route path="pomodoro" element={<PomodoroPage />} />
         <Route path="timer" element={<TimerPage />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </HashRouter>
   );
