@@ -70,7 +70,7 @@ export const TodoItem: React.FC<TodoProps> = ({
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           <p
             className={`whitespace-pre-wrap break-words ${
-              isDone ? "line-through" : ""
+              isDone ? "line-through opacity-60 " : ""
             }`}
           >
             {todo.task}
