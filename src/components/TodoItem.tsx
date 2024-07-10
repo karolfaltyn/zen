@@ -46,7 +46,7 @@ export const TodoItem: React.FC<TodoProps> = ({
   };
 
   return (
-    <div className="flex flex-col rounded border p-4 shadow-md">
+    <div className="flex flex-col rounded border p-4 shadow-md dark:border-[#ccc]">
       {isEditing ? (
         <div>
           <textarea
