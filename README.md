@@ -1,3 +1,4 @@
+
 # Zen
 
 ## Overview
@@ -27,35 +28,30 @@ To view the website online, visit [https://karolfaltyn.github.io/zen/](https://k
     
     ```
     git clone https://github.com/karolfaltyn/zen.git
-    
     ```
     
 2.  Navigate to the project directory:
     
     ```
     cd zen
-    
     ```
     
 3.  Install dependencies:
     
     ```
     npm install
-    
     ```
     
 4.  Compile Tailwind code:
     
     ```
     npm run build:tailwind
-    
     ```
     
 5.  Start the development server:
     
     ```
     npm run dev
-    
     ```
     
 6.  Open your browser and visit  `http://localhost:5173`  to view the application.
@@ -63,20 +59,12 @@ To view the website online, visit [https://karolfaltyn.github.io/zen/](https://k
 
 ## Technologies Used
 
-- HTML
-
-- Tailwind CSS
-
 - React
-
 - TypeScript
-
+- Tailwind CSS
+- Shadcn UI
 - PostCSS
-
-- Shadcn UI 
 
 ## License
 
 This project is licensed under the MIT License.
-
-
