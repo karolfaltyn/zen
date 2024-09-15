@@ -1,4 +1,3 @@
-
 # Zen
 
 ## Overview
@@ -23,6 +22,7 @@ To view the website online, visit [https://karolfaltyn.github.io/zen/](https://k
 
 ### Installation
 
+Follow these steps to set up the Zen App on your local machine:
 
 1.  Clone the repository:
     
@@ -59,11 +59,17 @@ To view the website online, visit [https://karolfaltyn.github.io/zen/](https://k
 
 ## Technologies Used
 
-- React
-- TypeScript
-- Tailwind CSS
-- Shadcn UI
-- PostCSS
+-   **React**: For building interactive and dynamic user interfaces.
+
+-   **TypeScript**: Adds type safety and improves development efficiency.
+
+-   **Tailwind CSS**: Utility-first CSS framework for responsive and customizable design.
+
+-   **Shadcn UI**: Provides accessible and customizable UI components.
+
+-   **PostCSS**: CSS processor for enhanced styling and optimization.
+
+-   **Local Storage**: For persistent data storage across browser sessions.
 
 ## License
 
