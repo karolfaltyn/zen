@@ -4,7 +4,7 @@ import { Options } from "../components/Options.tsx";
 import { Calendar } from "../components/ui/calendar.tsx";
 import { Footer } from "../components/Footer.tsx";
 
-import img_bg from "/assets/images/main-bg.svg";
+import img_bg from "../assets/main-bg.svg";
 
 export const Home = () => {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
